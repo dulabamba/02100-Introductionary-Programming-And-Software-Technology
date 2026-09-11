@@ -68,3 +68,20 @@ en uinitialiseret variabel b:
 
 10) Prøv 13 * 2 + 239 / 10 % 5 - 2 * 2 og forklar:
 
+    13 * 2 + 239 / 10 % 5 - 2 * 2, returnere:
+        $15 ==> 25
+
+    Rækkefølgen er:
+        1. *, /, %, *
+        2. +, -
+    
+    13 * 2 = 26,
+    239 / 10 = 23; fordi de er ints,
+    23 % 5 = 3, fordi Modulo,
+    2 * 2 = 4,
+
+    26 + 3 - 4 = 5
+
+11) Undersøg outputtet af /vars:
+
+
