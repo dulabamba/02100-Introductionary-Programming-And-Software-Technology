@@ -122,3 +122,4 @@ til værdien af variablen; $1:
 
 ## 2 Problemløsning Fortsat
 
+### 2.1 Skakprogram
