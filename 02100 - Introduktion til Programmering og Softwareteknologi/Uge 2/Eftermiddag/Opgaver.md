@@ -249,13 +249,65 @@ Design:
 
 Problemstilling: 
 
+Betrag følgende algoritme for udbetalingen af byttepenge. Vi antager, at valutaen har mønter af følgende
+værdier:
+
+    0 < v(1) < v(2) < (...) < v(n)
+
+De udbetalte byttepenge skal bestaa af saa faa mønter som muligt. Lad c være det beløb, der skal udbetales. 
+Antag derudover, at alle vi og c er heltal. Algoritmen er som følger: Find den største møntværdi mindre end 
+eller lige med c. Udbetal saa mange mønter af denne værdi som muligt og opdater c til de resterende 
+byttepenge. Fortsat paa denne maade, indtil c er nul. Her er en formel beskrivelse:
+
+    Lad c være beløbet til udbetaling.
+
+    Saa længe c > 0 gør følgende
+
+        Find det største v(i) ≤ c.
+        Beregn k = (c/v(i))
+        Udbetal k gange v(i).
+        Opdater c = c − k · v(i).
+
+Bevis eller modbevis, at algoritmen er korrekt, herunder, at den bestemmer det mindst mulige antal af
+mønter til udbetaling.
 
 Besvarelse:
+
+Der er to mulige scenarier hvor jeg kan forvente at algoritmen ikke er korrekt:
+
+1. Der kan forekomme et beløb som mønterne muligvis ikke kan give byttepenge på, eksemeplvis hvis det 
+er et beløb med øre, og man kun har mønter med kroner.
+
+2.  Der understreges at der skal angives det mindst mulige antal mønter til udbetaling, men dette er
+nok ikke muligt med den type algoritme der er opstilt. Eksempelvis ville algoritmen med
+startbeskrivelsen: "Saa længe c > 0 gør følgende" agere således hvis præsenteret med at skulle give
+8 kroner i byttepenge, givet:
+
+v(1): 1,
+v(2): 4,
+v(3): 5
+
+c = 8
+c = 8 - v(3)
+c = 3 - v(1)
+c = 2 - v(1)
+c = 1 - v(1)
+c = 0
+
+I stedet for at give 4 mønter, kunne 2 v(2) vlre givet, derfor kan der ikke garanteres at det mindst
+mulige antal mønter er til udbetaling.
 
 ### 2.5 Fletning af databaser
 
 Problemstilling: 
 
+Der er to databaser der indeholder den samme type data, dvs. de enkelte data i databasen har samme 
+struktur. Opgaven er, at flette databaserne sammen til en ny database ved at fjerne dubletter. Mere 
+specifikt skalden nye database indeholde præcis en kopi af hvert element, der dukker op i en af databaserne. 
+Databaserne stiller følgende funktioner til r˚adighed: antallet af elementer i databasen, hentning af elementet
+paa position i, tilføjelse af et element som sidste element i databasen. Hvis du føler, at der mangler noget, 
+tilføj egenskaber og specifikationer. Dernæst beskriv en metode, der løser opgaven. Argument´er for, at metoden 
+er korrekt. Hvad kan du siger om køretiden (hvad er problemstørrelsen og hvilke operationer tæller du)?
 
 Besvarelse:
 
