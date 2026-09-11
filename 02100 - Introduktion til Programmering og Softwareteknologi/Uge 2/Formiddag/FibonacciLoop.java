@@ -3,13 +3,17 @@
 public class FibonacciLoop {
     public static void main(String[] args) {
         
-        for (int i = 1; i <= 4; i++) { // Opretter 4 rækker
-            for (int j = 9; j >= 0; j--) { // Opretter at der skal printes tallene 9-0
-                for (int k = 1; k <= j; k++) { // Angiver at der skal printes 3 gange af det vilkårlige tal i j
-                    System.out.print(j);
-                }
+        int n1 = 1; // Definere F(k-2)
+        int n2 = 1; // Definere F(k-1)
+
+            System.out.print(n1 + " " + n2); // Printer de to første Fibonacci tal
+
+            for (int i = 3; i <= 12; i++) {
+                int n3 = n1 + n2; // Definere F(k) = F(k-1) + F(k-2)
+                    System.out.print(" " + n3); // Printer det nyeste Fibonacci tal; F(k)
+                n1 = n2; // Tilskriver en ny værdi til F(k-2)
+                n2 = n3; // Tilskriver en ny værdi til F(k-1)
             }
-            System.out.println();
-        }
+    System.out.println();
     }
 }
