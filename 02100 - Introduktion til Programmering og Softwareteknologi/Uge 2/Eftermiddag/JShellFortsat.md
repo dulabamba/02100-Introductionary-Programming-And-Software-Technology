@@ -1,4 +1,4 @@
-## 1 JShell
+## 1 JShell Fortsat
 
 1) Gå ind i JShell:
     Skriv "jshell" i terminal
@@ -119,3 +119,5 @@ til værdien af variablen; $1:
 15) Forlad JShell ved brug af rette kommando
 
     /exit, folader JShell
+
+## 2 Problemløsning Fortsat
