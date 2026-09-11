@@ -123,3 +123,34 @@ til værdien af variablen; $1:
 ## 2 Problemløsning Fortsat
 
 ### 2.1 Skakprogram
+
+Problemstilling:
+
+"Du vil gerne skrive et skakprogram. Hvordan kan du repræsentere skabrættet, brikkerner og deres positioner?
+Hvordan ville du repræsentere tingene, hvis dit bræt var paa 2000 × 2000 filter, men stadigvæk kun havde
+32 brikker placeret som i normal skak i midten af de 2 yderste rækker paa modsatte sider, jf. figur 1"
+
+Besvarelse:
+
+Hvis mit bræt er 2000x2000, men der stadigvæk kun er 32 brikker, kan jeg reducere behoved for hukommelse
+ved blot at huske positionen for de 32 brikker. For hver brik ville jeg gemme; farve, type, position (x,y):
+
+    farve: sort
+    type: tårn
+    position: (1324, 49)
+
+Hele brættet ville så kunne repræsenteret som en liste af alle brikker; board = [piece1, piece2, (...)]
+
+På denne måde reduceres redundans af tomme positioner/felter, og der kan stadigvæk senere laves metoder hvor 
+brikker kan slå hinanden.
+
+
+### 2.2 Byttepenge
+
+Problemstilling:
+
+"Design et program til at udbetale byttepenge i butikker. Inputtet er købsbeløbet og pengene givet til
+betaling. Specific´er opgaven og design en løsning til din specifikation"
+
+Besvarelse:
+
