@@ -154,3 +154,51 @@ betaling. Specific´er opgaven og design en løsning til din specifikation"
 
 Besvarelse:
 
+Vi antager at der findes mønter og sedler med n forskellige værdier:
+
+    0 < v(1) = 1 < v(2) = 2 < v(3) = 5 < v(4) = 10 < v(5) = 20 < v(6) = 50 < v(7) = 100
+
+Alle beløb skal angives som heltal, ellers kunne vi tilføje endnu mindre mønter med decimal-værdier
+der repræsentere øre.
+
+Vi definere:
+
+    b, 'bought amount' købsbeløbbet
+    p, 'paid amount' betalt beløb
+    c, 'change' bytte penge
+
+    Hvis Hvis p<b, har kunden betalt for lidt, og kunden skal betale flere penge.
+    Hvis p≥b, beregnes byttepengene som:
+
+    c = p - b
+
+Derefter finder programmet den største mønt-eller seddelværdi, som er mindre end eller lig med c.
+Programmet giver så kunden så mange af disse mønter eller sedler som muligt og trækker beløbbet fra
+byttepengene. Dette gentages indtil byttepengene er lig 0:
+
+    1. Beregn c
+
+    2. Så længe c > 0 gentages:
+
+        2.1 Find den største værdi v(i), hvor v(i) =< c
+        2.2 Beregn k, antal gange værdien v(i) kan være i c: k = (v(i)/c)
+        2.3 Giv kunden k mønter eller sedler med værdien v(i)
+        2.4 Opdater byttepengene: c = c - k * v(i)
+
+
+### 2.4 Køsystem
+
+Problemstilling: 
+
+
+### 2.5 Køsystem
+
+Problemstilling: 
+
+
+### 2.6 Køsystem
+
+Problemstilling: 
+
+
+## 2 Python Opstart
