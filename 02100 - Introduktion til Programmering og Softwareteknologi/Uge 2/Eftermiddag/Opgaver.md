@@ -186,19 +186,85 @@ byttepengene. Dette gentages indtil byttepengene er lig 0:
         2.4 Opdater byttepengene: c = c - k * v(i)
 
 
-### 2.4 Køsystem
+### 2.3 Køsystem
+
+Problemstilling: 
+
+En restaurant har et fast antal borde og siddepladser paa borde og kan ikke tage flere gæster ind, naar alle
+siddepladser er optaget. Restauranten er eftertragtet og gæster staar i kø. Gæsterne har ikke noget imod
+at blive tildelt en plads ved et bord med fremmede. Design et system og de tilhørende komponenter, der
+tildeler gæsterne fra køen til bordene.
+
+Besvarelse:
+
+Der antages:
+
+    En metode at registrere hvordan gæster ankommer eller forlader restauranten,
+    En måde at tilskrive en ventende gæst et kø-nummer,
+    Kø-numre er unikke og tildeles i stigende rækkefølge (k = 1; k++),
+    Der altid vides antallet af gæster i restauranten,
+    Det laveste kønummer, som er blevet udstedt, men endnu ikke er blevet brugt, er altid kendt
+
+Et par fejl der kunne forekomme:
+
+    Fejltælling på en gæsts ankomst,
+    Gæst forlader før deres kø-nummer kaldes,
+
+Design:
+
+    variabel s, tæller antal sæder i brug,
+    variabel m, maks antal siddepladser i restauranten,
+    variabel k, tæller det sidst kaldte kønummer,
+    variabel n, som det laveste kø-nummer der endnu ikke er kaldt
+
+1. Før restauranten åbner:
+
+    s = 0
+    k = 0
+    n = 1
+
+2. Når en gæst ankommer i restauraten, tjekkes der om der er en ledig plads 
+
+    s < m
+
+3. Hvis der er en ledig plads, kaldes gæsten med det laveste ubrugte kønummer
+
+4. Når gæsten sætter sig:
+
+    s = s + 1
+
+5. Kønummeret markeres som behandlet, og systemet går videre til det næste kønummer. 
+
+    n++
+
+6. Hvis alle siddepladser er optaget, må den næste gæst vente. 
+
+7. Når en gæst forlader restauranten: 
+
+        s = s - 1
+
+8. Når der igen er en ledig plads, kaldes den næste gæst i køen.
+
+### 2.4 Korrekthed af algoritme
 
 Problemstilling: 
 
 
-### 2.5 Køsystem
+Besvarelse:
+
+### 2.5 Fletning af databaser
 
 Problemstilling: 
 
 
-### 2.6 Køsystem
+Besvarelse:
+
+### 2.6 Plæneklipning
 
 Problemstilling: 
 
 
-## 2 Python Opstart
+Besvarelse:
+
+
+## 3 Python Opstart
