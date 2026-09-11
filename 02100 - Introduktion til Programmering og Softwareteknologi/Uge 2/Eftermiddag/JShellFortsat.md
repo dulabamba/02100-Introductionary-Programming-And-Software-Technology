@@ -84,4 +84,38 @@ en uinitialiseret variabel b:
 
 11) Undersøg outputtet af /vars:
 
+    /vars returnere alle de oprettede variabler og deres 
+    tilskrævede værdier i den givne instant jshell har 
+    været åben.
 
+12) Skriv en for-løkke der skriver alle værdier fra 1
+til værdien af variablen; $1:
+
+    for (int i = 1; i <= $1; i++) {
+        System.out.println(i);
+    }
+
+    Ovenstående kode returnerer:
+    1
+    2
+    3
+    4
+    5
+
+13) Undersøg outputtet af /list:
+
+    /list returnere alle kodeudsnit der er kørt i den
+    givne instant af jshell.
+
+14) Undersøg filer med /open
+
+    /open tillader at man kan køre Java-kode fra en fil
+    inde i JShell,
+
+    Eksempelvis kan jeg; /open DrawStairs.java, hvorefter
+    jeg kan kalde DrawStairs.main(new String[0]);, og
+    aktivere metoden .main til klassen DrawStairs.
+
+15) Forlad JShell ved brug af rette kommando
+
+    /exit, folader JShell
