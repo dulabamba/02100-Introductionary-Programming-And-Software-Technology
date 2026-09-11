@@ -121,3 +121,4 @@ til værdien af variablen; $1:
     /exit, folader JShell
 
 ## 2 Problemløsning Fortsat
+

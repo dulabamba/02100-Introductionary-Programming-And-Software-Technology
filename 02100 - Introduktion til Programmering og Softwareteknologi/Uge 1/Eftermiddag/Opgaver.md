@@ -13,6 +13,11 @@ Nej, fordi der specificeres ikke om hvilken rækkefølge tallene 1 til 4 printes
 Man kunne printe både [1,2,3,4] v [3,1,4,2] og udsagnet ville stadig være korrekt.
 Man kunne også printe alle værdier mellem 1 og 4 med brøkker, og udsagnet ville stadig være korrekt.
 
+Løsningsforslag:
+
+The programm prints the numbers 1 through 4 in increasing order as arabic numbers in a single row separated by single 
+blanks. The program does not print anything else
+
 ## 2 Entydighed af specifikation 2
 
 Problemstilling:
@@ -23,6 +28,7 @@ Problemstilling:
 Besvarelse:
 
 Ja, fordi der specificeres både hvad der skal arbejdes med specifikt, hvad der skal udføres og med præcis hvilken farve.
+Det kan forekomme at nogle ting er farvet den samme farve, men det tilføjes ikke i problemstillingen som et problem.
 
 ## 3 Entydighed af specifikation 3
 
@@ -34,7 +40,8 @@ opgave?"
 
 Besvarelse:
 
-Det afhænger om hvorvidt maskinen på forhånd ved hvad glas og metal er.
+Det afhænger om hvorvidt maskinen på forhånd ved hvad glas og metal er, samt om den kan identificere 
+andre ting end blot glas og metal, ellers kan ting som plastik ende med eks. glas eller metal.
 
 ## 4 Verifikation
 
@@ -48,8 +55,12 @@ Forslå en metode, der verificerer (eller modbeviser) din vens påstand."
 
 Besvarelse:
 
-Jeg ville give min ven et datasæt af en række værdier med vidt forskellige numeriske værdier i en tilfældig rækkefølge,
-på den måde kan det be-eller afkræftes om hvorvidt programmet kan sortere værdierne i stigende rækkefølge.
+Jeg ville give min ven et datasæt af værdier med forskellige numeriske værdier i en tilfældig rækkefølge, med enkelte
+dublikanter. På den måde kan jeg teste følgende om programmet; sortere tal i stigende rækkefølge, og om outputtet
+indeholder de samme værdier som inputtet, inklusivt gentagelser:
+
+Input: 4, 1, 3, 1
+Output: 1, 1, 3, 4
 
 ## 5 Konkretisering af specifikation og design af løsning
 
