@@ -1,5 +1,5 @@
 // Opgave 1
-// Test
+
 public class Position {
     public static void main(String[] args) {
         double s0 = 1.4;
