@@ -304,19 +304,45 @@ Problemstilling:
 Der er to databaser der indeholder den samme type data, dvs. de enkelte data i databasen har samme 
 struktur. Opgaven er, at flette databaserne sammen til en ny database ved at fjerne dubletter. Mere 
 specifikt skalden nye database indeholde præcis en kopi af hvert element, der dukker op i en af databaserne. 
-Databaserne stiller følgende funktioner til r˚adighed: antallet af elementer i databasen, hentning af elementet
+Databaserne stiller følgende funktioner til raadighed: antallet af elementer i databasen, hentning af elementet
 paa position i, tilføjelse af et element som sidste element i databasen. Hvis du føler, at der mangler noget, 
 tilføj egenskaber og specifikationer. Dernæst beskriv en metode, der løser opgaven. Argument´er for, at metoden 
 er korrekt. Hvad kan du siger om køretiden (hvad er problemstørrelsen og hvilke operationer tæller du)?
 
-Besvarelse:
+Løsningsforslag:
+
+(Tjek 'Ugeseddel Uge 2 eftermiddag - Løsningsforslag')
 
 ### 2.6 Plæneklipning
 
 Problemstilling: 
 
+Virksomheden DTUMovers har udviklet en ny plæneklipper. Plæneklipperen har et indbygget kompas og
+kan kun bevæge sig frem i en af retningerne nord/syd/øst/vest med en enkelt længdeenhed, samt dreje
+eller vende om uden at klippe det stykke græs, den befinder sig over. Naar plæneklipperen bevæger sig, slaar
+den græs paa et kvadratisk areal af 1 længdeenhed × 1 længdeenhed. Den har ingen hukommelse, dvs. den
+kan i særdeleshed ikke tælle antallet af klippede kvadrater og gemme kortet af græsplænen. Til gengæld
+kan plæneklipperen registrere, at den har n˚aet kanten af græsplænen, men kun n˚ar den peger mod kanten.
+Størrelsen af græsplænen og plæneklipperens startposition er ukendte.
 
-Besvarelse:
+1. Beskriv en metode, der sikrer, at plæneklipperen klipper hele græsplænen, dvs. at den besøger hvert
+kvadrat mindst en gang.
 
+2. Analyser overheaden af din metode. Med overheaden menes det, at plæneklipperen besøger kvadrater,
+der allerede er blevet klippet, gentagne gange. Det kan være, at dette er uundgaaeligt, men m˚alet er at
+analysere, hvor mange gange nogle kvadrater bliver genbesøgt. Afhængigt af din løsning kan det være
+hensigtsmæssigt at analysere den værste tilfælde (worst case) af overhead eller den gennemsnitlige
+(average case) overhead.
 
-## 3 Python Opstart
+3. Begrund, at din metode er korrekt
+
+4. Betragt de mere komplicerede græsplæner i figur 3. Prøv at finde metoder, der klipper disse græsplæner
+helt. Dine metoder maa være randomiserede, dvs. de maa bruge tilfældige beslutninger undervejs. Du
+behøver ikke begrunde korrektheden af dine metode
+
+5. Antag nu, at plæneklipperen har en hukommelse til at gemme ting. Kan du finde en determistisk
+(ikke-randomiseret) metode til de to græsplæner i figur
+
+Løsningsforslag:
+
+(Tjek 'Ugeseddel Uge 2 eftermiddag - Løsningsforslag')
